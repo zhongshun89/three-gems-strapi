@@ -1,0 +1,45 @@
+version: '3.4'
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    container_name: postgres
+    environment:
+      POSTGRES_DB: strapi
+      POSTGRES_USER: ${USER}
+      POSTGRES_PASSWORD: ${PASSWORD}
+      PGDATA: /data/postgres
+      restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data:/data/postgres
+
+  postgres_adminer:
+    image: dpage/pgadmin4
+    container_name: postgres_adminer
+    depends_on:
+      - postgres
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PASSWORD}
+    ports:
+      - 30003:80
+    restart: always
+
+  strapi:
+    image: strapi/strapi
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: strapi
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: ${USER}
+      DATABASE_PASSWORD: ${PASSWORD}
+    volumes:
+      - ./app:/srv/app
+    ports:
+      - '1337:1337'
+    depends_on:
+      - postgres
