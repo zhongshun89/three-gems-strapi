@@ -25,7 +25,7 @@ services:
       PGADMIN_DEFAULT_EMAIL: ${EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PASSWORD}
     ports:
-      - 30003:80
+      - 10000:80
     restart: always
 
   strapi:
@@ -40,6 +40,6 @@ services:
     volumes:
       - ./app:/srv/app
     ports:
-      - '1337:1337'
+      - '10001:1337'
     depends_on:
       - postgres
