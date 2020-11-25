@@ -55,6 +55,6 @@ services:
       - 80:80/tcp
       - 443:443/tcp
     depends_on:
-      - strapi
+      - strapi_server
     restart: unless-stopped
 
