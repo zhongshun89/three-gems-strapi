@@ -3,18 +3,18 @@ version: '3.4'
 services:
   postgres:
     image: postgres
-    restart: always
     container_name: postgres
     environment:
       POSTGRES_DB: strapi
       POSTGRES_USER: ${USER}
       POSTGRES_PASSWORD: ${PASSWORD}
       PGDATA: /data/postgres
-      restart: always
     ports:
       - 5432:5432
     volumes:
       - ./data:/data/postgres
+    restart: unless-stopped
+
 
   postgres_adminer:
     image: dpage/pgadmin4
@@ -25,10 +25,10 @@ services:
       PGADMIN_DEFAULT_EMAIL: ${EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PASSWORD}
     ports:
-      - 10000:80
-    restart: always
+      - 80:80
+    restart: unless-stopped
 
-  strapi:
+  strapi_server:
     image: strapi/strapi
     environment:
       DATABASE_CLIENT: postgres
@@ -40,6 +40,21 @@ services:
     volumes:
       - ./app:/srv/app
     ports:
-      - '10001:1337'
+      - '1337:1337'
     depends_on:
       - postgres
+  
+  strapi_web:
+    image: staticfloat/nginx-certbot
+    environment:
+        CERTBOT_EMAIL: ${EMAIL}
+    volumes:
+      - ./nginx-conf.d:/etc/nginx/user.conf.d:ro
+      - ./letsencrypt:/etc/letsencrypt
+    ports:
+      - 80:80/tcp
+      - 443:443/tcp
+    depends_on:
+      - strapi
+    restart: unless-stopped
+
