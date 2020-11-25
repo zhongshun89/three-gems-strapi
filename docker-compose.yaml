@@ -25,7 +25,7 @@ services:
       PGADMIN_DEFAULT_EMAIL: ${EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PASSWORD}
     ports:
-      - 80:80
+      - 10000:80
     restart: unless-stopped
 
   strapi_server:
