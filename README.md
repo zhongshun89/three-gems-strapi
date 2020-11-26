@@ -10,13 +10,21 @@ Product docker-compose of the strapi.
 
 ## Install
 
-1. Pull image
+1. Copy and edit env
+
+   ```sh
+   copy env.example .env
+   ```
+
+2. Edit strapi.conf in the nginx-conf.d
+
+3. Pull image
 
    ```sh
    docker-compose pull
    ```
 
-2. Start
+4. Start
 
    ```sh
    docker-compose up -d
