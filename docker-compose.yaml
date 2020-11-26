@@ -1,59 +1,64 @@
 version: '3.4'
 
 services:
-  postgres:
+  db:
     image: postgres
-    container_name: postgres
+    container_name: db
     environment:
-      POSTGRES_DB: strapi
+      POSTGRES_DB: ${STRAPI_DB_NAME}
       POSTGRES_USER: ${USER}
       POSTGRES_PASSWORD: ${PASSWORD}
-      PGDATA: /data/postgres
-    ports:
-      - 5432:5432
+      PGDATA: /data/db
+    command: -p ${DB_PORT}  # change default port to DB_PORT
+    expose:
+      - ${DB_PORT}  # Publishes DB_PORT to other containers but NOT to host machine
+    # ports:
+    #   - ${DB_PORT}:${DB_PORT}
     volumes:
-      - ./data:/data/postgres
+      - ${DB_DATA_DIR}: /data/db
     restart: unless-stopped
 
 
-  postgres_adminer:
+  db_adminer:
     image: dpage/pgadmin4
-    container_name: postgres_adminer
+    container_name: db_adminer
     depends_on:
-      - postgres
+      - db
     environment:
       PGADMIN_DEFAULT_EMAIL: ${EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PASSWORD}
-    ports:
-      - 10000:80
+    command: -p ${DB_ADMINER_PORT}
+    expose:
+      - ${DB_ADMINER_PORT}
     restart: unless-stopped
 
-  strapi_server:
+  server:
     image: strapi/strapi
     environment:
       DATABASE_CLIENT: postgres
-      DATABASE_NAME: strapi
-      DATABASE_HOST: postgres
-      DATABASE_PORT: 5432
+      DATABASE_NAME: ${STRAPI_DB_NAME}
+      DATABASE_HOST: db
+      DATABASE_PORT: ${DB_PORT}
       DATABASE_USERNAME: ${USER}
       DATABASE_PASSWORD: ${PASSWORD}
+    command: -p ${STRAPI_PORT}
+    expose:
+      - ${STRAPI_PORT}
     volumes:
-      - ./app:/srv/app
-    ports:
-      - '1337:1337'
+      - ${STRAPI_APP_DIR}:/srv/app
     depends_on:
-      - postgres
+      - db
   
-  strapi_web:
+  nginx:
     image: staticfloat/nginx-certbot
     environment:
         CERTBOT_EMAIL: ${EMAIL}
     volumes:
       - ./nginx-conf.d:/etc/nginx/user.conf.d:ro
-      - ./letsencrypt:/etc/letsencrypt
+      - ${ENCRYPT_DIR}:/etc/letsencrypt
     ports:
       - 80:80/tcp
       - 443:443/tcp
     depends_on:
-      - strapi_server
+      - server
     restart: unless-stopped
