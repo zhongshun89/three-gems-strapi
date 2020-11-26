@@ -1,9 +1,9 @@
 version: '3.4'
 
 services:
-  db:
+  db_server:
     image: postgres
-    container_name: db
+    container_name: db_server
     environment:
       POSTGRES_DB: ${STRAPI_DB_NAME}
       POSTGRES_USER: ${USER}
@@ -21,7 +21,7 @@ services:
     image: dpage/pgadmin4
     container_name: db_adminer
     depends_on:
-      - db
+      - db_server
     environment:
       PGADMIN_DEFAULT_EMAIL: ${EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PASSWORD}
@@ -45,7 +45,7 @@ services:
     volumes:
       - ${STRAPI_APP_DIR}:/srv/app
     depends_on:
-      - db
+      - db_server
   
   nginx:
     image: staticfloat/nginx-certbot
