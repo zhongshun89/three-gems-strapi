@@ -7,6 +7,7 @@ Product docker-compose of the strapi, include postgres, pgadmin4, nginx/certbot,
 * [Strapi](https://strapi.io/)
 * [Postgres](https://www.postgresql.org/)
 * [Nginx](https://www.nginx.com/)
+* [Jenkins](https://www.jenkins.io/)
 
 ## Install
 
