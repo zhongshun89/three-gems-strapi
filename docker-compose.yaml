@@ -65,6 +65,11 @@ services:
     container_name: nginx
     environment:
         CERTBOT_EMAIL: ${EMAIL}
+        ENVSUBST_VARS: TEST_DOMAIN TEST_URL JENKINS_DOMAIN JENKINS_URL # variable names are space-separated
+        TEST_DOMAIN: ${TEST_DOMAIN}
+        TEST_URL: ${TEST_URL}
+        JENKINS_DOMAIN: ${JENKINS_DOMAIN}
+        JENKINS_URL: ${JENKINS_URL}
     volumes:
       - ./nginx-conf.d:/etc/nginx/user.conf.d:ro
       - ${ENCRYPT_DIR}:/etc/letsencrypt
