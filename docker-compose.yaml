@@ -35,7 +35,7 @@ services:
     environment:
       DATABASE_CLIENT: postgres
       DATABASE_NAME: ${STRAPI_DB_NAME}
-      DATABASE_HOST: db
+      DATABASE_HOST: db_server
       DATABASE_PORT: ${DB_PORT}
       DATABASE_USERNAME: ${USER}
       DATABASE_PASSWORD: ${PASSWORD}

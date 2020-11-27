@@ -10,7 +10,7 @@ Product docker-compose of the strapi.
 
 ## Install
 
-1. Copy and edit env
+1. Copy and edit .env
 
    ```sh
    copy env.example .env
