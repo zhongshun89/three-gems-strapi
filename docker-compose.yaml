@@ -50,10 +50,10 @@ services:
   jenkins:
     image: docker.io/bitnami/jenkins:2-debian-10 # https://github.com/bitnami/bitnami-docker-jenkins
     container_name: jenkins
-    environment:
-      JENKINS_USERNAME: ${USER}
-      JENKINS_PASSWORD: ${PASSWORD}
-      DISABLE_JENKINS_INITIALIZATION: 'true'
+    #environment:
+      #JENKINS_USERNAME: ${USER}
+      #JENKINS_PASSWORD: ${PASSWORD}
+      #DISABLE_JENKINS_INITIALIZATION: 'true'
       #JENKINS_HOME: /jenkins/jenkins_home
     expose:
       - 8080
