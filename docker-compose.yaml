@@ -48,14 +48,14 @@ services:
     restart: unless-stopped
   
   jenkins:
-    image: docker.io/bitnami/jenkins:2-debian-10
+    image: docker.io/bitnami/jenkins:2-debian-10 # https://github.com/bitnami/bitnami-docker-jenkins
     container_name: jenkins
     expose:
       - 8080
       - 50000
       - 8443
     volumes:
-      - ${JENKINS_DATA_DIR}:/bitnami/jenkins
+      - jenkins_data:/bitnami/jenkins
     restart: unless-stopped
   
   nginx:
@@ -72,3 +72,10 @@ services:
     depends_on:
       - server
     restart: unless-stopped
+
+    volumes:
+      - 'jenkins_data:/bitnami/jenkins'
+
+volumes:
+  jenkins_data:
+    driver: local
