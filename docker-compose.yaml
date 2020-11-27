@@ -53,8 +53,8 @@ services:
     environment:
       JENKINS_USERNAME: ${USER}
       JENKINS_PASSWORD: ${PASSWORD}
-      # JENKINS_HOME: /jenkins/jenkins_home
-      # DISABLE_JENKINS_INITIALIZATION: no
+      DISABLE_JENKINS_INITIALIZATION: yes
+      #JENKINS_HOME: /jenkins/jenkins_home
     expose:
       - 8080
       - 50000
