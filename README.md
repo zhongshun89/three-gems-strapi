@@ -1,4 +1,4 @@
-## About The Project
+# About The Project
 
 Product docker-compose of the strapi, include postgres, pgadmin4, nginx/certbot, jenkins.
 
