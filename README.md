@@ -30,7 +30,7 @@ Product docker-compose of the strapi, include postgres, pgadmin4, nginx/certbot,
    docker-compose up -d
    ```
 
-5. Open the link
+5. Open the panel link of strapi admin
 
    ***Warning:
       The link is not valid until the initialization of strapi is complete,
