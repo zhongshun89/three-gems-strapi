@@ -45,6 +45,17 @@ services:
       - ${STRAPI_APP_DIR}:/srv/app
     depends_on:
       - db_server
+    restart: unless-stopped
+  
+  jenkins:
+    image: 'docker.io/bitnami/jenkins:2-debian-10'
+    container_name: jenkins
+    expose
+      - 8080
+      - 50000
+    volumes:
+      - 'jenkins_data:/bitnami/jenkins'
+    restart: unless-stopped
   
   nginx:
     image: staticfloat/nginx-certbot
