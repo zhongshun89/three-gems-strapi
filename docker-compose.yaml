@@ -73,9 +73,6 @@ services:
       - server
     restart: unless-stopped
 
-    volumes:
-      - 'jenkins_data:/bitnami/jenkins'
-
 volumes:
   jenkins_data:
     driver: local
