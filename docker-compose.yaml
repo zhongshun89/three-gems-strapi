@@ -74,8 +74,6 @@ services:
     ports:
       - 80:80/tcp
       - 443:443/tcp
-    depends_on:
-      - server
     restart: unless-stopped
 
 volumes:
