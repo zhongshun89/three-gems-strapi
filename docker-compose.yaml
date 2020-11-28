@@ -83,11 +83,13 @@ services:
   certbot:
       image: certbot/certbot:latest
       container_name: certbot
-      command: certonly --webroot --webroot-path=/var/www/certbot \ 
-        --agree-tos \ 
+      depends_on:
+        - nginx
+      command: certonly --webroot --webroot-path=/var/www/certbot \
+        --email ${EMAIL} \
+        --agree-tos \
         --no-eff-email \
-        --email ${EMAIL} \ 
-        -d ${STRAPI_DOMAIN} \ 
+        -d ${STRAPI_DOMAIN} \
         -d ${WEB_DOMAIN} \
         -d ${JENKINS_DOMAIN}
       volumes:
