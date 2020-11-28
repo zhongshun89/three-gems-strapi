@@ -87,7 +87,7 @@ services:
         --agree-tos \ 
         --no-eff-email \
         --email ${EMAIL} \ 
-        -d ${STRAPI_DOMAIN} \ 
+        -d ${STRAPI_URL} \ 
         -d ${WEB_DOMAIN} \
         -d ${JENKINS_DOMAIN}
       volumes:
