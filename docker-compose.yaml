@@ -63,13 +63,13 @@ services:
     image: nginx:latest
     container_name: nginx
     environment:
-      - STRAPI_DOMAIN: ${STRAPI_DOMAIN}
+      STRAPI_DOMAIN: ${STRAPI_DOMAIN}
       # URL format http://${service name}:${service exposed port}
       # more about docker network see https://docs.docker.com/compose/networking/
-      - STRAPI_SERVER: http://server:1337
-      - WEB_DOMAIN: ${WEB_DOMAIN}
-      - JENKINS_DOMAIN: ${JENKINS_DOMAIN}
-      - JENKINS_SERVER: http://jenkins:8080
+      STRAPI_SERVER: http://server:1337
+      WEB_DOMAIN: ${WEB_DOMAIN}
+      JENKINS_DOMAIN: ${JENKINS_DOMAIN}
+      JENKINS_SERVER: http://jenkins:8080
     volumes:
       - ./nginx-conf-templates:/etc/nginx/templates
       - ${PUBLIC_DIR}:/var/www/html
