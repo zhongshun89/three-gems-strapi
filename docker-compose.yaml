@@ -63,7 +63,7 @@ services:
     image: nginx:latest
     container_name: nginx
     environment:
-      STRAPI_DOMAIN: ${STRAPI_URL}
+      STRAPI_DOMAIN: ${STRAPI_DOMAIN}
       # URL format http://${service name}:${service exposed port}
       # more about docker network see https://docs.docker.com/compose/networking/
       STRAPI_SERVER: http://server:1337
@@ -87,7 +87,7 @@ services:
         --agree-tos \ 
         --no-eff-email \
         --email ${EMAIL} \ 
-        -d ${STRAPI_URL} \ 
+        -d ${STRAPI_DOMAIN} \ 
         -d ${WEB_DOMAIN} \
         -d ${JENKINS_DOMAIN}
       volumes:
