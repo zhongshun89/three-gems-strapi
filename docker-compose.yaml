@@ -2,23 +2,22 @@ version: '3.4'
 
 services:
   db_server:
-    image: postgres
+    image: postgres:latest
     container_name: db_server
     environment:
       POSTGRES_DB: ${STRAPI_DB_NAME}
       POSTGRES_USER: ${USER}
       POSTGRES_PASSWORD: ${PASSWORD}
       PGDATA: /data/db
-    command: -p ${DB_PORT}  # change default port to DB_PORT
     expose:
-      - ${DB_PORT}  # Publishes DB_PORT to other containers but NOT to host machine
+      - 5432
     volumes:
       - ${DB_DATA_DIR}:/data/db
     restart: unless-stopped
 
 
   db_adminer:
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:latest
     container_name: db_adminer
     depends_on:
       - db_server
@@ -61,14 +60,37 @@ services:
     restart: unless-stopped
   
   nginx:
-    image: staticfloat/nginx-certbot
+    image: nginx:latest
     container_name: nginx
     environment:
-        CERTBOT_EMAIL: ${EMAIL}
+      - STRAPI_DOMAIN: ${STRAPI_DOMAIN}
+      # URL format http://${service name}:${service exposed port}
+      # more about docker network see https://docs.docker.com/compose/networking/
+      - STRAPI_SERVER: http://server:1337
+      - WEB_DOMAIN: ${WEB_DOMAIN}
+      - JENKINS_DOMAIN: ${JENKINS_DOMAIN}
+      - JENKINS_SERVER: http://jenkins:8080
     volumes:
-      - ./nginx-conf.d:/etc/nginx/user.conf.d:ro
-      - ${ENCRYPT_DIR}:/etc/letsencrypt
+      - ./nginx-conf-templates:/etc/nginx/templates
+      - ${PUBLIC_DIR}:/var/www/html
+      - ${CERT_DIR}/conf:/etc/nginx/ssl
+      - ${CERT_DIR}/data:/var/www/certbot
     ports:
       - 80:80/tcp
       - 443:443/tcp
     restart: unless-stopped
+
+  certbot:
+      image: certbot/certbot:latest
+      container_name: certbot
+      command: certonly --webroot --webroot-path=/var/www/certbot \ 
+        --agree-tos \ 
+        --no-eff-email \
+        --email ${EMAIL} \ 
+        -d ${STRAPI_DOMAIN} \ 
+        -d ${WEB_DOMAIN} \
+        -d ${JENKINS_DOMAIN}
+      volumes:
+          - ${CERT_DIR}/conf:/etc/letsencrypt
+          - ${CERT_DIR}/logs:/var/log/letsencrypt
+          - ${CERT_DIR}/data:/var/www/certbot
