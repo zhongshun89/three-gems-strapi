@@ -9,7 +9,7 @@ services:
       WEB_DOMAIN: ${WEB_DOMAIN}
       JENKINS_DOMAIN: ${JENKINS_DOMAIN}
     volumes:
-      - ./certbot_nginx-conf-templates:/etc/nginx/templates
+      - ./certbot-nginx-conf-templates:/etc/nginx/templates
       - ./certbot/conf:/etc/nginx/ssl
       - ./certbot/data:/var/www/certbot
     ports:
