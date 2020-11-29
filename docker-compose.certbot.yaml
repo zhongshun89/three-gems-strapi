@@ -19,8 +19,6 @@ services:
   certbot:
       image: certbot/certbot:latest
       container_name: certbot
-      # Helps us to checking every 12 hours to see if new SSL certificates are needed;
-      entrypoint: /bin/sh -c "trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;"
       volumes:
           - ./certbot/conf:/etc/letsencrypt
           - ./certbot/logs:/var/log/letsencrypt
