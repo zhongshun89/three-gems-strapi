@@ -1,3 +1,4 @@
+# certbot
 server {
     listen [::]:80;
     listen 80;
@@ -6,8 +7,12 @@ server {
     
     root /var/www/certbot;
     
-    # certbot    
-    location ~ /.well-known/acme-challenge {
+    location ^~ /.well-known/acme-challenge {
         try_files $uri $uri/ =404;
+    }
+
+    # redirect
+    location / {
+        return 301 https://$host$request_uri;
     }
 } 

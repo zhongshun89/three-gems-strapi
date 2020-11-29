@@ -7,7 +7,7 @@ server {
     root /var/www/certbot;
 
     # certbot  
-    location ~ /.well-known/acme-challenge {
+    location ^~ /.well-known/acme-challenge {
         try_files $uri $uri/ =404;
     }
     
