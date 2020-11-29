@@ -145,7 +145,7 @@ for domain in ${!domains[*]}; do
 	echo; echo "[i] Creating dummy certificate for $domain_name domain..."; echo;
 
 	path="/etc/letsencrypt/live/$domain_name"
-	docker-compose -f docker-compose.certbot.yml run --rm --entrypoint "openssl req -x509 -nodes -newkey rsa:1024 \
+	docker-compose -f docker-compose.certbot.yaml run --rm --entrypoint "openssl req -x509 -nodes -newkey rsa:1024 \
 	-days 1 -keyout '$path/privkey.pem' -out '$path/fullchain.pem' -subj '/CN=localhost'" certbot
   fi
 done
@@ -153,7 +153,7 @@ done
 echo; echo "[i] Starting nginx..."; echo;
 
 # Restarting for case if nginx container is already started
-docker-compose -f docker-compose.certbot.yml up -d nginx && docker-compose -f docker-compose.certbot.yml restart nginx
+docker-compose -f docker-compose.certbot.yaml up -d nginx && docker-compose -f docker-compose.certbot.yaml restart nginx
 
 # Select appropriate email arg
 case "$email" in
