@@ -68,7 +68,6 @@ services:
       JENKINS_DOMAIN: ${JENKINS_DOMAIN}
     volumes:
       - ./certbot_nginx-conf-templates:/etc/nginx/templates
-      - ${PUBLIC_DIR}:/var/www/html
       - ./certbot/conf:/etc/nginx/ssl
       - ./certbot/data:/var/www/certbot
     ports:
