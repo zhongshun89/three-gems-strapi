@@ -1,3 +1,5 @@
+.PHONY: build
+
 certbot-test:
 	@chmod +x ./register_ssl.sh
 	@sudo ./register_ssl.sh \
