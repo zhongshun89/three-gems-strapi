@@ -115,7 +115,7 @@ function request_new_certificate {
 
 # custom variable
 domains_list=(sub1.example.com sub1.example.com sub3.example.com)
-email="zhongshun89@outlook.com" # Adding a valid address is strongly recommended
+email="example@example.com" # Adding a valid address is strongly recommended
 staging=1 # Set to 1 if you're testing your setup to avoid hitting request limits of letenscrypt
 
 rsa_key_size=4096
