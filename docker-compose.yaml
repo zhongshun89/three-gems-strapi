@@ -79,9 +79,9 @@ services:
     ports:
       - 80:80/tcp
       - 443:443/tcp
-    depends_on:
-      - server
-      - jenkins
+    # depends_on:
+    #   - server
+    #   - jenkins
     restart: unless-stopped
 
   certbot:
