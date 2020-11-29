@@ -110,5 +110,5 @@ services:
           - ./certbot/logs:/var/log/letsencrypt
           - ./certbot/data:/var/www/certbot
       depends_on:
-        - product_nginx
+        - certbot_nginx
       restart: unless-stopped
