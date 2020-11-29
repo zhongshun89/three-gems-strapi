@@ -17,28 +17,24 @@ Product docker-compose of the strapi, include postgres, pgadmin4, nginx/certbot,
    copy env.example .env
    ```
 
-2. Edit *.conf in the nginx-conf.d
+2. Get certificates
 
-3. Pull image
+   Edit the custom variables on line 116 of the init-letsencrypt.sh, the domain name and email must be consistent with the .env file
 
    ```sh
-   docker-compose pull
+   chmod 755 ./init-letsencrypt.sh
+   sudo ./init-letsencrypt.sh
    ```
 
-4. Start
+3. Start
 
    ```sh
    docker-compose up -d
    ```
 
-5. Open the panel link of strapi admin
+4. Open the panel link of the strapi admin
 
    ***Warning:
       The link is not valid until the initialization of strapi is complete,
       this may take some time,
       please careful to the logs of docker-compose.***
-
-## Acknowledgements
-
-* [Docker nginx certbot](https://github.com/staticfloat/docker-nginx-certbot)
-* [Strapi Doc](https://strapi.io/documentation/v3.x/deployment/nginx-proxy.html)

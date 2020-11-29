@@ -113,12 +113,13 @@ function request_new_certificate {
 ##################### Script start ################################
 ###################################################################
 
+# custom variable
+domains_list=(sub1.example.com sub1.example.com sub3.example.com)
+email="zhongshun89@outlook.com" # Adding a valid address is strongly recommended
+staging=1 # Set to 1 if you're testing your setup to avoid hitting request limits of letenscrypt
 
-domains_list=(test.threegems.net jenkins.threegems.net)
 rsa_key_size=4096
 data_path="./certbot"
-email="zhongshun89@outlook.com" # Adding a valid address is strongly recommended
-staging=1 # Set to 1 if you're testing your setup to avoid hitting request limits
 
 check_if_docker_compose_installed
 
