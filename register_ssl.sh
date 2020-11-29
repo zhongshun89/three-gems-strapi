@@ -185,7 +185,7 @@ for domain in ${!domains[*]}; do
 
 		mkdir -p "$data_path/www"
 
-		docker-compose -f docker-compose.certbot.yml run --rm --entrypoint "certbot certonly --webroot -w /var/www/certbot --cert-name $domain_name $domain_args \
+		docker-compose -f docker-compose.certbot.yaml run --rm --entrypoint "certbot certonly --webroot -w /var/www/certbot --cert-name $domain_name $domain_args \
 		$staging_arg $email_arg --rsa-key-size $rsa_key_size --agree-tos --force-renewal --non-interactive" certbot
 	fi
 done
