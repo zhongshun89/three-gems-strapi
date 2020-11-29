@@ -70,8 +70,6 @@ services:
       WEB_DOMAIN: ${WEB_DOMAIN}
       JENKINS_DOMAIN: ${JENKINS_DOMAIN}
       JENKINS_SERVER: http://jenkins:8080
-    # For getting updated certificates from  Nginx we need to add this command
-    # command: /bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'
     volumes:
       - ./product-nginx-conf-templates:/etc/nginx/templates
       - ./nginx.conf:/etc/nginx/nginx.conf
@@ -98,3 +96,16 @@ services:
       depends_on:
         - nginx
       restart: unless-stopped
+  
+  # For getting updated certificates from  Nginx we need to add this service
+  reloader:
+    image: apogiatzis/livereloading
+    container_name: reloader
+    privileged: true
+    environment:
+      - RELOAD_DELAY=60           # seconds
+      - RELOAD_CONTAINER=nginx
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./certbot/conf/live:/code
+    restart: unless-stopped
