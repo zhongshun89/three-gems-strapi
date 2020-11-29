@@ -98,14 +98,15 @@ services:
       restart: unless-stopped
   
   # For getting updated certificates from  Nginx we need to add this service
-  reloader:
-    image: apogiatzis/livereloading
-    container_name: reloader
-    privileged: true
-    environment:
-      - RELOAD_DELAY=60           # seconds
-      - RELOAD_CONTAINER=nginx
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./certbot/conf/live:/code
-    restart: unless-stopped
+  # https://github.com/apogiatzis/docker-compose-livereloader
+  # reloader:
+  #   image: apogiatzis/livereloading
+  #   container_name: reloader
+  #   privileged: true
+  #   environment:
+  #     - RELOAD_DELAY=60           # seconds
+  #     - RELOAD_CONTAINER=nginx
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #     - ./certbot/conf/live:/code
+  #   restart: unless-stopped
