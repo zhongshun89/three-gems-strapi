@@ -59,7 +59,7 @@ function start_nginx {
 
 function remove_nginx {
   echo "### Remove certbot nginx ..."
-  docker-compose -f docker-compose.certbot.yaml && docker-compose -f docker-compose.certbot.yaml rm --force nginx
+  docker-compose -f docker-compose.certbot.yaml stop nginx && docker-compose -f docker-compose.certbot.yaml rm --force nginx
 }
 
 
