@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    environment:
+      STRAPI_DOMAIN: ${STRAPI_DOMAIN}
+      WEB_DOMAIN: ${WEB_DOMAIN}
+      JENKINS_DOMAIN: ${JENKINS_DOMAIN}
+    volumes:
+      - ./certbot_nginx-conf-templates:/etc/nginx/templates
+      - ./certbot/conf:/etc/nginx/ssl
+      - ./certbot/data:/var/www/certbot
+    ports:
+      - 80:80/tcp
+    restart: unless-stopped
+
+  certbot:
+      image: certbot/certbot:latest
+      container_name: certbot
+      # Helps us to checking every 12 hours to see if new SSL certificates are needed;
+      entrypoint: /bin/sh -c "trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;"
+      volumes:
+          - ./certbot/conf:/etc/letsencrypt
+          - ./certbot/logs:/var/log/letsencrypt
+          - ./certbot/data:/var/www/certbot
+      depends_on:
+        - nginx
+      restart: unless-stopped

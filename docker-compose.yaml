@@ -59,24 +59,9 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
   
-  certbot_nginx:
+  nginx:
     image: nginx:latest
-    container_name: certbot_nginx
-    environment:
-      STRAPI_DOMAIN: ${STRAPI_DOMAIN}
-      WEB_DOMAIN: ${WEB_DOMAIN}
-      JENKINS_DOMAIN: ${JENKINS_DOMAIN}
-    volumes:
-      - ./certbot_nginx-conf-templates:/etc/nginx/templates
-      - ./certbot/conf:/etc/nginx/ssl
-      - ./certbot/data:/var/www/certbot
-    ports:
-      - 80:80/tcp
-    restart: unless-stopped
-  
-  product_nginx:
-    image: nginx:latest
-    container_name: product_nginx
+    container_name: nginx
     environment:
       STRAPI_DOMAIN: ${STRAPI_DOMAIN}
       # URL format http://${service name}:${service exposed port}
@@ -109,5 +94,5 @@ services:
           - ./certbot/logs:/var/log/letsencrypt
           - ./certbot/data:/var/www/certbot
       depends_on:
-        - certbot_nginx
+        - nginx
       restart: unless-stopped
