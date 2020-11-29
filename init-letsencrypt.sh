@@ -52,9 +52,14 @@ function make_dummy_certificate {
 }
 
 function start_nginx {
-  echo "### Starting nginx ..."
+  echo "### Starting certbot nginx ..."
   docker-compose -f docker-compose.certbot.yaml up --force-recreate -d nginx
   echo
+}
+
+function remove_nginx {
+  echo "### Remove certbot nginx ..."
+  docker-compose -f docker-compose.certbot.yaml && docker-compose -f docker-compose.certbot.yaml rm --force nginx
 }
 
 
@@ -101,11 +106,6 @@ function request_new_certificate {
       --agree-tos \
       --force-renewal" certbot
   echo
-}
-
-function reload_nginx {
-  echo "### Reloading nginx ..."
-  docker-compose -f docker-compose.certbot.yaml exec nginx nginx -s reload
 }
 
 
@@ -161,5 +161,4 @@ for (( i=0; i<"$n_domains"; i++ )); do
   request_new_certificate "$domains" "$email" "$rsa_key_size" "$staging"
 done
 
-# Reload nginx with new certificates.
-reload_nginx
+remove_nginx
