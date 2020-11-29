@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    environment:
+      STRAPI_DOMAIN: ${STRAPI_DOMAIN}
+      WEB_DOMAIN: ${WEB_DOMAIN}
+      JENKINS_DOMAIN: ${JENKINS_DOMAIN}
+    volumes:
+      - ./certbot-nginx-conf-templates:/etc/nginx/templates
+      - ./certbot/conf:/etc/nginx/ssl
+      - ./certbot/data:/var/www/certbot
+    ports:
+      - 80:80
+    restart: unless-stopped
+
+  certbot:
+      image: certbot/certbot:latest
+      container_name: certbot
+      volumes:
+          - ./certbot/conf:/etc/letsencrypt
+          - ./certbot/logs:/var/log/letsencrypt
+          - ./certbot/data:/var/www/certbot
+      depends_on:
+        - nginx
+      restart: unless-stopped

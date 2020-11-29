@@ -2,23 +2,22 @@ version: '3.4'
 
 services:
   db_server:
-    image: postgres
+    image: postgres:latest
     container_name: db_server
     environment:
       POSTGRES_DB: ${STRAPI_DB_NAME}
       POSTGRES_USER: ${USER}
       POSTGRES_PASSWORD: ${PASSWORD}
       PGDATA: /data/db
-    command: -p ${DB_PORT}  # change default port to DB_PORT
     expose:
-      - ${DB_PORT}  # Publishes DB_PORT to other containers but NOT to host machine
+      - 5432
     volumes:
       - ${DB_DATA_DIR}:/data/db
     restart: unless-stopped
 
 
   db_adminer:
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:latest
     container_name: db_adminer
     depends_on:
       - db_server
@@ -61,14 +60,41 @@ services:
     restart: unless-stopped
   
   nginx:
-    image: staticfloat/nginx-certbot
+    image: nginx:latest
     container_name: nginx
     environment:
-        CERTBOT_EMAIL: ${EMAIL}
+      STRAPI_DOMAIN: ${STRAPI_DOMAIN}
+      # URL format http://${service name}:${service exposed port}
+      # more about docker network see https://docs.docker.com/compose/networking/
+      STRAPI_SERVER: http://server:1337
+      WEB_DOMAIN: ${WEB_DOMAIN}
+      JENKINS_DOMAIN: ${JENKINS_DOMAIN}
+      JENKINS_SERVER: http://jenkins:8080
+    # For getting updated certificates from  Nginx we need to add this command
+    # command: /bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'
     volumes:
-      - ./nginx-conf.d:/etc/nginx/user.conf.d:ro
-      - ${ENCRYPT_DIR}:/etc/letsencrypt
+      - ./product-nginx-conf-templates:/etc/nginx/templates
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ${PUBLIC_DIR}:/var/www/html
+      - ./certbot/conf:/etc/nginx/ssl
+      - ./certbot/data:/var/www/certbot
     ports:
-      - 80:80/tcp
-      - 443:443/tcp
+      - 80:80
+      - 443:443
+    depends_on:
+      - server
+      - jenkins
     restart: unless-stopped
+
+  certbot:
+      image: certbot/certbot:latest
+      container_name: certbot
+      # Helps us to checking every 12 hours to see if new SSL certificates are needed;
+      entrypoint: /bin/sh -c "trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;"
+      volumes:
+          - ./certbot/conf:/etc/letsencrypt
+          - ./certbot/logs:/var/log/letsencrypt
+          - ./certbot/data:/var/www/certbot
+      depends_on:
+        - nginx
+      restart: unless-stopped
