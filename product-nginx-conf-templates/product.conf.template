@@ -46,7 +46,7 @@ server {
     ssl_protocols       TLSv1.2 TLSv1.3;
     ssl_prefer_server_ciphers on;
 
-    root /var/www/html/web;
+    root /var/www/html/web/dist;
 
     location / {
         try_files $uri $uri/ /index.html;
