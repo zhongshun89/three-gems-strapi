@@ -67,6 +67,7 @@ services:
       # URL format http://${service name}:${service exposed port}
       # more about docker network see https://docs.docker.com/compose/networking/
       STRAPI_SERVER: http://server:1337
+      DB_ADMIN_SERVER: http://db_adminer:80
       WEB_DOMAIN: ${WEB_DOMAIN}
       JENKINS_DOMAIN: ${JENKINS_DOMAIN}
       JENKINS_SERVER: http://jenkins:8080
@@ -82,6 +83,7 @@ services:
     depends_on:
       - server
       - jenkins
+      - db_adminer
     restart: unless-stopped
 
   certbot:

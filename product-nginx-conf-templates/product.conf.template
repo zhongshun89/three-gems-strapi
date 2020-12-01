@@ -1,7 +1,7 @@
 server {
     listen [::]:80;
     listen 80;
-    server_name ${STRAPI_DOMAIN} ${WEB_DOMAIN} ${JENKINS_DOMAIN};
+    server_name ${STRAPI_DOMAIN} ${WEB_DOMAIN} ${JENKINS_DOMAIN} ${DB_ADMIN_DOMAIN};
     server_tokens   off;
     
     root /var/www/certbot;
@@ -31,6 +31,24 @@ server {
     # Proxy Config
     location / {
         proxy_pass ${STRAPI_SERVER};
+        proxy_set_header Host $host;
+    }
+}
+
+# database admin
+server {
+    listen              [::]:443 ssl http2;
+    listen              443 ssl http2;
+    server_name          ${DB_ADMIN_DOMAIN};
+    ssl_certificate     /etc/nginx/ssl/live/${DB_ADMIN_DOMAIN}/fullchain.pem;
+    ssl_certificate_key /etc/nginx/ssl/live/${DB_ADMIN_DOMAIN}/privkey.pem;
+    server_tokens       off;
+    ssl_protocols       TLSv1.2 TLSv1.3;
+    ssl_prefer_server_ciphers on;
+
+    # Proxy Config
+    location / {
+        proxy_pass ${DB_ADMIN_SERVER};
         proxy_set_header Host $host;
     }
 }
