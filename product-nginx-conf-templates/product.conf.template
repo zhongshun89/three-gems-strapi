@@ -42,9 +42,9 @@ server {
     server_name          ${DB_ADMIN_DOMAIN};
     ssl_certificate     /etc/nginx/ssl/live/${DB_ADMIN_DOMAIN}/fullchain.pem;
     ssl_certificate_key /etc/nginx/ssl/live/${DB_ADMIN_DOMAIN}/privkey.pem;
-    server_tokens       off;
-    ssl_protocols       TLSv1.2 TLSv1.3;
-    ssl_prefer_server_ciphers on;
+    #server_tokens       off;
+    #ssl_protocols       TLSv1.2 TLSv1.3;
+    #ssl_prefer_server_ciphers on;
 
     # Proxy Config
     location / {
