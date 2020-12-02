@@ -4,7 +4,8 @@ services:
   db_server:
     image: postgres:latest
     container_name: db_server
-    # Can't set username and password of postgres by env variable，I don't know why.
+    # Can't set username and password of postgres by .env variable，I don't know why.
+    # More about the .env issue is here: https://github.com/docker/compose/issues/4223#issuecomment-611450295
     environment:
       POSTGRES_DB: strapi
       POSTGRES_USER: admin
