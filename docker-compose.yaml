@@ -4,6 +4,7 @@ services:
   db_server:
     image: postgres:latest
     container_name: db_server
+    # Can't set username and password of postgres by env variable，I don't know why.
     environment:
       POSTGRES_DB: strapi
       POSTGRES_USER: admin
