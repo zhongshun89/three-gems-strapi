@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3.7'
 
 services:
   db_server:
@@ -16,7 +16,6 @@ services:
     volumes:
       - ${DB_DATA_DIR}:/data/db
     restart: unless-stopped
-
 
   db_adminer:
     image: dpage/pgadmin4:latest
