@@ -1,0 +1,60 @@
+{
+  "canvas": {
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 376,
+    "scrollLeft": 11,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "PostgreSQL",
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    }
+  },
+  "table": {
+    "tables": [],
+    "indexes": []
+  },
+  "memo": {
+    "memos": [
+      {
+        "value": "ertwretwtr\n1sdafasdfaf",
+        "id": "016db6c9-0d4a-dc4c-0638-a4eecee1b90b",
+        "ui": {
+          "active": false,
+          "left": 200,
+          "top": 100,
+          "zIndex": 3,
+          "width": 127,
+          "height": 100
+        }
+      }
+    ]
+  },
+  "relationship": {
+    "relationships": []
+  }
+}
