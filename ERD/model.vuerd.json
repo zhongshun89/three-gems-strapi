@@ -1,0 +1,285 @@
+{
+  "canvas": {
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 214,
+    "scrollLeft": 99,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "PostgreSQL",
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    }
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "User",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 966,
+          "top": 395,
+          "zIndex": 187,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "id": "91981117-d5b3-d42d-90aa-f740f81207f0"
+      },
+      {
+        "name": "Book",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 196,
+          "top": 537,
+          "zIndex": 210,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "id": "6a9c4b18-17fa-07c9-3c96-1ea681cc4164"
+      },
+      {
+        "name": "Proverb",
+        "comment": "箴言",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 728,
+          "top": 587,
+          "zIndex": 194,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "id": "c1c5c5d6-181c-0128-2187-615e3d740e36"
+      },
+      {
+        "name": "Comment",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 203,
+          "top": 817,
+          "zIndex": 212,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "id": "6eb3f11c-23a3-78cd-3a0f-cab1909e6c7a"
+      },
+      {
+        "name": "Video",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 714,
+          "top": 722,
+          "zIndex": 218,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "id": "f5c1762d-9dd0-6685-86d3-57a1e80afbca"
+      },
+      {
+        "name": "Article",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 183,
+          "top": 677,
+          "zIndex": 211,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "id": "47bf252c-9376-3399-2d80-71b69034b98b"
+      },
+      {
+        "name": "Tag",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 706,
+          "top": 856,
+          "zIndex": 219,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "id": "dd5203a7-b05e-56af-dd16-5756c3607e29"
+      },
+      {
+        "name": "Message",
+        "comment": "留言",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 1144,
+          "top": 569,
+          "zIndex": 195,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "id": "c1971bdf-97d5-d7e8-fe4c-5e83db34e28b"
+      },
+      {
+        "name": "Notification",
+        "comment": "通知",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 1150,
+          "top": 785,
+          "zIndex": 201,
+          "widthName": 66,
+          "widthComment": 60
+        },
+        "id": "7324c448-6dc0-fa9e-3da2-4c419e5aa404"
+      },
+      {
+        "name": "Disciple",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 476,
+          "top": 402,
+          "zIndex": 186,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "id": "7cdb9501-7cf7-7980-6d8b-56bb55a28d92"
+      },
+      {
+        "name": "DonationRecord",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 1133,
+          "top": 909,
+          "zIndex": 223,
+          "widthName": 96,
+          "widthComment": 60
+        },
+        "id": "92000d69-d4f5-2a42-a5ad-8d160ae2412c"
+      },
+      {
+        "name": "DonationAim",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": true,
+          "left": 1140,
+          "top": 1004,
+          "zIndex": 225,
+          "widthName": 76,
+          "widthComment": 60
+        },
+        "id": "5107e929-c6d8-7725-36b6-8189380b8000"
+      },
+      {
+        "name": "AccountBase",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 783,
+          "top": 273,
+          "zIndex": 185,
+          "widthName": 79,
+          "widthComment": 60
+        },
+        "id": "2c509c72-1ea3-2065-f7f3-9238c06814cb"
+      },
+      {
+        "name": "Campaign",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 212,
+          "top": 988,
+          "zIndex": 213,
+          "widthName": 61,
+          "widthComment": 60
+        },
+        "id": "83cde656-33e4-78ee-c9e3-55c703734da9"
+      },
+      {
+        "name": "CampaignRegistration",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 703,
+          "top": 962,
+          "zIndex": 221,
+          "widthName": 131,
+          "widthComment": 60
+        },
+        "id": "5b82c4df-ae5c-cdae-c33f-97e2c3294896"
+      },
+      {
+        "name": "CampaignRecord",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 203,
+          "top": 1120,
+          "zIndex": 217,
+          "widthName": 103,
+          "widthComment": 60
+        },
+        "id": "ae4ed24f-0c95-d6fb-3e11-847676e9fdd2"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": [
+      {
+        "value": "命名规则：\n\n表名：单数，首字母大写驼峰命名方式。\n列名：单数小写，单词用下划线分割，加上表名的同义缀。\n外键：小写表名加上ID。",
+        "id": "18b38ee0-65e3-f5c8-bd72-3704a9345cca",
+        "ui": {
+          "active": false,
+          "left": 41,
+          "top": 64,
+          "zIndex": 180,
+          "width": 364,
+          "height": 100
+        }
+      }
+    ]
+  },
+  "relationship": {
+    "relationships": []
+  }
+}
