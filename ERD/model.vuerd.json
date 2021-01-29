@@ -2,8 +2,8 @@
   "canvas": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 116,
-    "scrollLeft": 178,
+    "scrollTop": 208,
+    "scrollLeft": 273,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -510,7 +510,7 @@
           {
             "name": "video_id",
             "comment": "",
-            "dataType": "",
+            "dataType": "serial",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -686,7 +686,7 @@
           {
             "name": "video_id",
             "comment": "",
-            "dataType": "",
+            "dataType": "serial",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -707,8 +707,8 @@
             "id": "2f51764a-d467-f631-f5bb-0d830db939e3"
           },
           {
-            "name": "monk_id",
-            "comment": "",
+            "name": "video_related_monk",
+            "comment": "monk",
             "dataType": "serial",
             "default": "",
             "option": {
@@ -722,7 +722,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 119,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -731,7 +731,7 @@
           },
           {
             "name": "video_translated_by",
-            "comment": "",
+            "comment": "user",
             "dataType": "serial",
             "default": "",
             "option": {
@@ -755,7 +755,7 @@
           {
             "name": "video_url",
             "comment": "",
-            "dataType": "",
+            "dataType": "varchar(255)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -770,7 +770,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 76,
               "widthDefault": 60
             },
             "id": "a62ae231-38af-03e8-889f-6ae22ea13e01"
@@ -938,10 +938,10 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 713,
           "top": 741,
-          "zIndex": 2082,
+          "zIndex": 2569,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1504,14 +1504,14 @@
           },
           {
             "name": "monk_name",
-            "comment": "",
-            "dataType": "",
+            "comment": "required and unique",
+            "dataType": "varchar(20)",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -1519,8 +1519,8 @@
               "fk": false,
               "pfk": false,
               "widthName": 74,
-              "widthComment": 60,
-              "widthDataType": 60,
+              "widthComment": 118,
+              "widthDataType": 68,
               "widthDefault": 60
             },
             "id": "981ed5b3-c6fd-fbee-c43a-3f7dc22e153a"
@@ -1528,13 +1528,13 @@
           {
             "name": "monk_intro",
             "comment": "",
-            "dataType": "",
+            "dataType": "text",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -1551,13 +1551,13 @@
           {
             "name": "monk_image",
             "comment": "",
-            "dataType": "",
-            "default": "",
+            "dataType": "varchar(255)",
+            "default": "/default.image",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -1566,21 +1566,21 @@
               "pfk": false,
               "widthName": 76,
               "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
+              "widthDataType": 76,
+              "widthDefault": 84
             },
             "id": "a72447dc-2bb7-8460-2b3c-b3c6006f10ff"
           },
           {
             "name": "monk_portrait",
             "comment": "",
-            "dataType": "",
-            "default": "",
+            "dataType": "varchar(255)",
+            "default": "/default.image",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -1589,21 +1589,21 @@
               "pfk": false,
               "widthName": 81,
               "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
+              "widthDataType": 76,
+              "widthDefault": 84
             },
             "id": "02d7d9b8-2300-6792-36e8-129f837c2bcd"
           },
           {
             "name": "monk_is_buddha",
             "comment": "",
-            "dataType": "",
-            "default": "",
+            "dataType": "boolean",
+            "default": "false",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -1622,7 +1622,7 @@
           "active": false,
           "left": 145,
           "top": 669,
-          "zIndex": 1684,
+          "zIndex": 2541,
           "widthName": 60,
           "widthComment": 60
         },
@@ -2553,7 +2553,7 @@
           {
             "name": "video_id",
             "comment": "",
-            "dataType": "",
+            "dataType": "serial",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -3576,7 +3576,7 @@
           "columnIds": [
             "2f51764a-d467-f631-f5bb-0d830db939e3"
           ],
-          "x": 1118,
+          "x": 1135,
           "y": 888.25,
           "direction": "right"
         },
@@ -3622,7 +3622,7 @@
           "columnIds": [
             "2f51764a-d467-f631-f5bb-0d830db939e3"
           ],
-          "x": 915.5,
+          "x": 924,
           "y": 1035.5,
           "direction": "bottom"
         },
@@ -3760,7 +3760,7 @@
           "columnIds": [
             "888e6e15-8340-1850-15b8-5dca4025e387"
           ],
-          "x": 209.66666666666669,
+          "x": 226,
           "y": 861,
           "direction": "bottom"
         },
@@ -3783,7 +3783,7 @@
           "columnIds": [
             "888e6e15-8340-1850-15b8-5dca4025e387"
           ],
-          "x": 533,
+          "x": 631,
           "y": 765,
           "direction": "right"
         },
@@ -3806,7 +3806,7 @@
           "columnIds": [
             "888e6e15-8340-1850-15b8-5dca4025e387"
           ],
-          "x": 339,
+          "x": 388,
           "y": 861,
           "direction": "bottom"
         },
@@ -3921,7 +3921,7 @@
           "columnIds": [
             "888e6e15-8340-1850-15b8-5dca4025e387"
           ],
-          "x": 468.33333333333337,
+          "x": 550,
           "y": 861,
           "direction": "bottom"
         },
@@ -3976,7 +3976,7 @@
           "columnIds": [
             "ea10ac25-e98c-041c-04f5-441674d2fed1"
           ],
-          "x": 915.5,
+          "x": 924,
           "y": 741,
           "direction": "top"
         },
