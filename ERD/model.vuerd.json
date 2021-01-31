@@ -2,7 +2,7 @@
   "canvas": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 1048.1480712890625,
+    "scrollTop": 988.8888549804688,
     "scrollLeft": 0,
     "show": {
       "tableComment": true,
@@ -319,9 +319,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 709.8148102524844,
-          "top": 1657.703705543353,
-          "zIndex": 3463,
+          "left": 69.07409497249203,
+          "top": 1685,
+          "zIndex": 3829,
           "widthName": 60,
           "widthComment": 60
         },
@@ -329,7 +329,7 @@
       },
       {
         "name": "Word",
-        "comment": "箴言",
+        "comment": "",
         "columns": [
           {
             "name": "word_id",
@@ -564,9 +564,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 39,
-          "top": 960,
-          "zIndex": 3547,
+          "left": 7.518519769480137,
+          "top": 823.8888942974578,
+          "zIndex": 3835,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1077,9 +1077,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 703.7407411086706,
-          "top": 847.4814772502881,
-          "zIndex": 3632,
+          "left": 448.185195707979,
+          "top": 1057.6666540834653,
+          "zIndex": 3825,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1452,9 +1452,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 680.3703904225505,
-          "top": 1182.703715477459,
-          "zIndex": 3636,
+          "left": 926.666676931912,
+          "top": 1225.2963063775742,
+          "zIndex": 3816,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1462,7 +1462,7 @@
       },
       {
         "name": "Message",
-        "comment": "留言",
+        "comment": "",
         "columns": [
           {
             "name": "message_id",
@@ -1653,7 +1653,7 @@
           "active": false,
           "left": 926.8518497914447,
           "top": 40.1851847804624,
-          "zIndex": 3400,
+          "zIndex": 3833,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1804,9 +1804,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 120.92592688254359,
-          "top": 655.1111116630059,
-          "zIndex": 3233,
+          "left": 18.148153188787596,
+          "top": 498.6296363995391,
+          "zIndex": 3822,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1957,9 +1957,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 57.7037134906388,
-          "top": 414.8518527716765,
-          "zIndex": 3309,
+          "left": 364.1851827936409,
+          "top": 269.48148817780566,
+          "zIndex": 3821,
           "widthName": 60,
           "widthComment": 60
         },
@@ -2041,9 +2041,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 388.8518527716765,
-          "top": 188.25925491768666,
-          "zIndex": 3239,
+          "left": 483.29629346323605,
+          "top": 72.51851877606963,
+          "zIndex": 3820,
           "widthName": 76,
           "widthComment": 60
         },
@@ -2311,7 +2311,7 @@
           "active": false,
           "left": 834.851856745319,
           "top": 397.2222213391905,
-          "zIndex": 3398,
+          "zIndex": 3696,
           "widthName": 60,
           "widthComment": 60
         },
@@ -2495,7 +2495,7 @@
       },
       {
         "name": "Notice",
-        "comment": "公告",
+        "comment": "",
         "columns": [
           {
             "name": "notice_id",
@@ -2617,7 +2617,7 @@
           "active": false,
           "left": 1380.9259328430076,
           "top": 1387.0740909988479,
-          "zIndex": 3623,
+          "zIndex": 3838,
           "widthName": 60,
           "widthComment": 60
         },
@@ -2699,9 +2699,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 98.7777756805774,
-          "top": 1713.5185187760694,
-          "zIndex": 3243,
+          "left": 59.88888833699406,
+          "top": 1537.5925998408106,
+          "zIndex": 3827,
           "widthName": 84,
           "widthComment": 60
         },
@@ -2782,7 +2782,7 @@
           },
           {
             "name": "entry_tag_type",
-            "comment": "monk/book/viedo/userArticle/monkArticle/resource",
+            "comment": "monk/book/viedo/audio/userArticle/monkArticle/resource",
             "dataType": "varchar(20)",
             "default": "",
             "option": {
@@ -2797,7 +2797,7 @@
               "fk": false,
               "pfk": false,
               "widthName": 88,
-              "widthComment": 291,
+              "widthComment": 326,
               "widthDataType": 69,
               "widthDefault": 60
             },
@@ -2806,9 +2806,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 574.9259308561859,
-          "top": 1428.8888803897094,
-          "zIndex": 3624,
+          "left": 550.8518577387298,
+          "top": 1519.6296175247367,
+          "zIndex": 3836,
           "widthName": 60,
           "widthComment": 60
         },
@@ -3074,9 +3074,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 36.25926087815087,
-          "top": 1249.5555553347976,
-          "zIndex": 3626,
+          "left": 47.370371547746096,
+          "top": 1166.222225312833,
+          "zIndex": 3826,
           "widthName": 70,
           "widthComment": 60
         },
@@ -3214,7 +3214,7 @@
       },
       {
         "name": "Tip",
-        "comment": "提醒",
+        "comment": "",
         "columns": [
           {
             "name": "tip_id",
@@ -3380,13 +3380,304 @@
         ],
         "ui": {
           "active": false,
-          "left": 1380.5555069372988,
-          "top": 1619.4443939953685,
-          "zIndex": 3655,
+          "left": 1377.7777292699,
+          "top": 1584.259210208317,
+          "zIndex": 3841,
           "widthName": 60,
           "widthComment": 60
         },
         "id": "ffefdd6d-926b-a8ed-0eec-b47a527e537d"
+      },
+      {
+        "name": "Audio",
+        "comment": "",
+        "columns": [
+          {
+            "name": "audio_id",
+            "comment": "",
+            "dataType": "serial",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "525a5ff7-a3ac-c342-5f69-31be23eb2dcf"
+          },
+          {
+            "name": "audio_related_monk",
+            "comment": "monk",
+            "dataType": "serial",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 120,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "bdac3ced-1673-a1ec-0c94-2f14f1c6dc39"
+          },
+          {
+            "name": "audio_translated_by",
+            "comment": "user",
+            "dataType": "serial",
+            "default": "-1",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 119,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "f405d8bc-7e2f-4a52-d9ad-7d4c7e2ed855"
+          },
+          {
+            "name": "audio_url",
+            "comment": "unique",
+            "dataType": "varchar(255)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 76,
+              "widthDefault": 60
+            },
+            "id": "9fbd7346-f77b-de43-395b-b6c11511244b"
+          },
+          {
+            "name": "audio_title",
+            "comment": "unique",
+            "dataType": "varchar(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 61,
+              "widthComment": 60,
+              "widthDataType": 76,
+              "widthDefault": 60
+            },
+            "id": "eac748e9-1581-049f-e9a5-657a97a10759"
+          },
+          {
+            "name": "audio_intro",
+            "comment": "",
+            "dataType": "text",
+            "default": "''",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 66,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "ce5943c8-e5ce-dc66-ef6d-47843cd2d942"
+          },
+          {
+            "name": "audio_play_time",
+            "comment": "",
+            "dataType": "integer",
+            "default": "0",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 96,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "6d6a62b6-c43f-8a3a-a6ee-40b5b4e0a71b"
+          },
+          {
+            "name": "audio_owned_like",
+            "comment": "",
+            "dataType": "integer",
+            "default": "0",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 106,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "280d9337-8162-4799-63dc-6611f8c857f7"
+          },
+          {
+            "name": "audio_weight",
+            "comment": "",
+            "dataType": "integer",
+            "default": "0",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 79,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b44d4d92-0e58-3354-ed00-643f1d38ac12"
+          },
+          {
+            "name": "audio_allowed",
+            "comment": "",
+            "dataType": "boolean",
+            "default": "true",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 85,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "930776f4-99e7-0f7d-b9da-c584e6a80863"
+          },
+          {
+            "name": "audio_created_at",
+            "comment": "",
+            "dataType": "date",
+            "default": "now",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 103,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e81a6f9e-c58e-6c33-16b4-52d7b0e65207"
+          },
+          {
+            "name": "audio_updated_at",
+            "comment": "",
+            "dataType": "date",
+            "default": "now",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 106,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "63d0eddc-d897-a371-3969-975bbae9f641"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 537.0370243714177,
+          "top": 712.9629469771447,
+          "zIndex": 3824,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "id": "6315116f-917a-4d8b-7d12-3f2f26ced458"
       }
     ],
     "indexes": [
@@ -3424,18 +3715,18 @@
           "columnIds": [
             "67ad4bb7-51fa-75a7-d0b1-d725fcba4b3c"
           ],
-          "x": 521.7777756805774,
-          "y": 1778.7685187760694,
-          "direction": "right"
+          "x": 271.38888833699406,
+          "y": 1668.0925998408106,
+          "direction": "bottom"
         },
         "end": {
           "tableId": "6a9c4b18-17fa-07c9-3c96-1ea681cc4164",
           "columnIds": [
             "3ab570ff-b3ce-4dc7-852e-1a366711e5c7"
           ],
-          "x": 709.8148102524844,
-          "y": 1815.203705543353,
-          "direction": "left"
+          "x": 315.07409497249205,
+          "y": 1685,
+          "direction": "top"
         },
         "id": "16aefdf8-8e0e-8326-07dc-cdccc51d6c72",
         "relationshipType": "ZeroOneN"
@@ -3517,7 +3808,7 @@
             "58875acc-faa3-5754-a4c1-623ef2eff21a"
           ],
           "x": 834.851856745319,
-          "y": 544.4722213391906,
+          "y": 446.3055546725239,
           "direction": "left"
         },
         "end": {
@@ -3525,8 +3816,8 @@
           "columnIds": [
             "4a9dc12e-09ba-c845-4690-ef89aa94c49c"
           ],
-          "x": 494.7037134906388,
-          "y": 510.8518527716765,
+          "x": 801.1851827936409,
+          "y": 365.48148817780566,
           "direction": "right"
         },
         "id": "c9a66612-c834-3377-cdea-d187b5fc8c0e",
@@ -3539,7 +3830,7 @@
           "columnIds": [
             "58875acc-faa3-5754-a4c1-623ef2eff21a"
           ],
-          "x": 1204.6018567453189,
+          "x": 1081.3518567453189,
           "y": 691.7222213391906,
           "direction": "bottom"
         },
@@ -3562,17 +3853,17 @@
           "columnIds": [
             "746c51c1-ebff-e421-9f9e-9210faf5d984"
           ],
-          "x": 885.3703904225505,
-          "y": 1333.703715477459,
-          "direction": "bottom"
+          "x": 926.666676931912,
+          "y": 1300.7963063775742,
+          "direction": "left"
         },
         "end": {
           "tableId": "44824d49-91df-99b6-07ca-5f105f98b39c",
           "columnIds": [
             "fbacd06f-2790-b7aa-bfb6-9c9110784f13"
           ],
-          "x": 884.9259308561859,
-          "y": 1428.8888803897094,
+          "x": 878.3518577387298,
+          "y": 1519.6296175247367,
           "direction": "top"
         },
         "id": "761b345a-3bde-8ac4-c150-6ec3aabe4247",
@@ -3585,8 +3876,8 @@
           "columnIds": [
             "888e6e15-8340-1850-15b8-5dca4025e387"
           ],
-          "x": 242.4259268825436,
-          "y": 847.1111116630059,
+          "x": 139.6481531887876,
+          "y": 690.6296363995391,
           "direction": "bottom"
         },
         "end": {
@@ -3594,8 +3885,8 @@
           "columnIds": [
             "928aea4e-b25f-0f5f-1cc2-93374cffc07f"
           ],
-          "x": 242,
-          "y": 960,
+          "x": 210.51851976948015,
+          "y": 823.8888942974578,
           "direction": "top"
         },
         "id": "1a1b1618-2272-5472-e891-1e655df47ef1",
@@ -3608,8 +3899,8 @@
           "columnIds": [
             "888e6e15-8340-1850-15b8-5dca4025e387"
           ],
-          "x": 606.9259268825435,
-          "y": 751.1111116630059,
+          "x": 504.1481531887876,
+          "y": 546.6296363995391,
           "direction": "right"
         },
         "end": {
@@ -3617,9 +3908,9 @@
           "columnIds": [
             "1a755827-4562-0305-4c88-61ea45c322fb"
           ],
-          "x": 703.7407411086706,
-          "y": 1015.2314772502881,
-          "direction": "left"
+          "x": 553.685195707979,
+          "y": 1057.6666540834653,
+          "direction": "top"
         },
         "id": "041c0c16-a407-aa72-e933-b965d8becb23",
         "relationshipType": "ZeroOneN"
@@ -3631,8 +3922,8 @@
           "columnIds": [
             "888e6e15-8340-1850-15b8-5dca4025e387"
           ],
-          "x": 485.4259268825436,
-          "y": 847.1111116630059,
+          "x": 382.6481531887876,
+          "y": 690.6296363995391,
           "direction": "bottom"
         },
         "end": {
@@ -3640,8 +3931,8 @@
           "columnIds": [
             "b798342f-2844-bacb-a8b5-60253aa57adc"
           ],
-          "x": 261.7592608781509,
-          "y": 1249.5555553347976,
+          "x": 272.8703715477461,
+          "y": 1166.222225312833,
           "direction": "top"
         },
         "id": "97c01f0a-eec1-ef32-3959-c1fed8ca1647",
@@ -3677,17 +3968,17 @@
           "columnIds": [
             "51a0df9b-2d24-e476-96ec-329042e920ab"
           ],
-          "x": 388.8518527716765,
-          "y": 253.50925491768666,
-          "direction": "left"
+          "x": 693.796293463236,
+          "y": 203.01851877606964,
+          "direction": "bottom"
         },
         "end": {
           "tableId": "92000d69-d4f5-2a42-a5ad-8d160ae2412c",
           "columnIds": [
             "ada3bccf-f236-d9c2-15ce-58d8bac0b076"
           ],
-          "x": 276.2037134906388,
-          "y": 414.8518527716765,
+          "x": 582.6851827936409,
+          "y": 269.48148817780566,
           "direction": "top"
         },
         "id": "57958ffc-4178-8ed5-b8c9-c6e56dbff37b",
@@ -3700,17 +3991,17 @@
           "columnIds": [
             "58875acc-faa3-5754-a4c1-623ef2eff21a"
           ],
-          "x": 958.101856745319,
-          "y": 691.7222213391906,
-          "direction": "bottom"
+          "x": 834.851856745319,
+          "y": 642.6388880058572,
+          "direction": "left"
         },
         "end": {
           "tableId": "f5c1762d-9dd0-6685-86d3-57a1e80afbca",
           "columnIds": [
             "ea10ac25-e98c-041c-04f5-441674d2fed1"
           ],
-          "x": 914.7407411086706,
-          "y": 847.4814772502881,
+          "x": 764.685195707979,
+          "y": 1057.6666540834653,
           "direction": "top"
         },
         "id": "f7f1e679-eb6b-3b74-0173-06c7f684d743",
@@ -3761,6 +4052,52 @@
         },
         "id": "ec555c23-b9a9-f634-bf4d-62266bf935e9",
         "relationshipType": "ZeroOne"
+      },
+      {
+        "identification": false,
+        "start": {
+          "tableId": "7cdb9501-7cf7-7980-6d8b-56bb55a28d92",
+          "columnIds": [
+            "888e6e15-8340-1850-15b8-5dca4025e387"
+          ],
+          "x": 504.1481531887876,
+          "y": 642.6296363995391,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "6315116f-917a-4d8b-7d12-3f2f26ced458",
+          "columnIds": [
+            "bdac3ced-1673-a1ec-0c94-2f14f1c6dc39"
+          ],
+          "x": 642.7870243714177,
+          "y": 712.9629469771447,
+          "direction": "top"
+        },
+        "id": "3645b8c1-f72e-8365-afc9-99a0277d21a4",
+        "relationshipType": "ZeroOneN"
+      },
+      {
+        "identification": false,
+        "start": {
+          "tableId": "2c509c72-1ea3-2065-f7f3-9238c06814cb",
+          "columnIds": [
+            "58875acc-faa3-5754-a4c1-623ef2eff21a"
+          ],
+          "x": 834.851856745319,
+          "y": 544.4722213391906,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "6315116f-917a-4d8b-7d12-3f2f26ced458",
+          "columnIds": [
+            "f405d8bc-7e2f-4a52-d9ad-7d4c7e2ed855"
+          ],
+          "x": 854.2870243714177,
+          "y": 712.9629469771447,
+          "direction": "top"
+        },
+        "id": "b84e5b5f-422b-ddb4-bcf2-fec0b42e304e",
+        "relationshipType": "ZeroOneN"
       }
     ]
   }
