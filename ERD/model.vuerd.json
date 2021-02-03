@@ -2,8 +2,8 @@
   "canvas": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 988.8888549804688,
-    "scrollLeft": 0,
+    "scrollTop": 0,
+    "scrollLeft": 354,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -202,6 +202,29 @@
             "id": "8248ee12-f698-ad7b-9b7a-9c0b066a2c76"
           },
           {
+            "name": "book_size",
+            "comment": "mb",
+            "dataType": "integer",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 61,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "5f01e62b-7076-f037-762b-69390711980b"
+          },
+          {
             "name": "book_owned_like",
             "comment": "",
             "dataType": "integer",
@@ -319,9 +342,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 69.07409497249203,
-          "top": 1685,
-          "zIndex": 3829,
+          "left": 125.07409497249203,
+          "top": 1609.5,
+          "zIndex": 3887,
           "widthName": 60,
           "widthComment": 60
         },
@@ -564,9 +587,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 7.518519769480137,
-          "top": 823.8888942974578,
-          "zIndex": 3835,
+          "left": 76.51851976948014,
+          "top": 798.8888942974578,
+          "zIndex": 3843,
           "widthName": 60,
           "widthComment": 60
         },
@@ -765,7 +788,7 @@
           "active": false,
           "left": 1261.1481472283235,
           "top": 828.703705543353,
-          "zIndex": 3427,
+          "zIndex": 3888,
           "widthName": 60,
           "widthComment": 60
         },
@@ -960,6 +983,29 @@
             "id": "d03f4b02-9efd-78d2-49df-6cbf28bc8cdd"
           },
           {
+            "name": "video_size",
+            "comment": "mb",
+            "dataType": "integer",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 63,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "64a6429e-44de-c23c-7cd8-3dda542407ed"
+          },
+          {
             "name": "video_owned_like",
             "comment": "",
             "dataType": "integer",
@@ -1077,9 +1123,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 448.185195707979,
-          "top": 1057.6666540834653,
-          "zIndex": 3825,
+          "left": 511.185195707979,
+          "top": 1085.6666540834653,
+          "zIndex": 3872,
           "widthName": 60,
           "widthComment": 60
         },
@@ -2806,9 +2852,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 550.8518577387298,
-          "top": 1519.6296175247367,
-          "zIndex": 3836,
+          "left": 645.8518577387298,
+          "top": 1513.6296175247367,
+          "zIndex": 3873,
           "widthName": 60,
           "widthComment": 60
         },
@@ -3577,6 +3623,29 @@
             "id": "280d9337-8162-4799-63dc-6611f8c857f7"
           },
           {
+            "name": "audio_size",
+            "comment": "mb",
+            "dataType": "integer",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 64,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "f28c2a39-2a80-a63b-76e0-4c0de5f4a7b9"
+          },
+          {
             "name": "audio_weight",
             "comment": "",
             "dataType": "integer",
@@ -3673,7 +3742,7 @@
           "active": false,
           "left": 537.0370243714177,
           "top": 712.9629469771447,
-          "zIndex": 3824,
+          "zIndex": 3859,
           "widthName": 60,
           "widthComment": 60
         },
@@ -3715,17 +3784,17 @@
           "columnIds": [
             "67ad4bb7-51fa-75a7-d0b1-d725fcba4b3c"
           ],
-          "x": 271.38888833699406,
-          "y": 1668.0925998408106,
-          "direction": "bottom"
+          "x": 482.88888833699406,
+          "y": 1602.8425998408106,
+          "direction": "right"
         },
         "end": {
           "tableId": "6a9c4b18-17fa-07c9-3c96-1ea681cc4164",
           "columnIds": [
             "3ab570ff-b3ce-4dc7-852e-1a366711e5c7"
           ],
-          "x": 315.07409497249205,
-          "y": 1685,
+          "x": 371.07409497249205,
+          "y": 1609.5,
           "direction": "top"
         },
         "id": "16aefdf8-8e0e-8326-07dc-cdccc51d6c72",
@@ -3808,7 +3877,7 @@
             "58875acc-faa3-5754-a4c1-623ef2eff21a"
           ],
           "x": 834.851856745319,
-          "y": 446.3055546725239,
+          "y": 470.8472213391905,
           "direction": "left"
         },
         "end": {
@@ -3830,7 +3899,7 @@
           "columnIds": [
             "58875acc-faa3-5754-a4c1-623ef2eff21a"
           ],
-          "x": 1081.3518567453189,
+          "x": 1204.6018567453189,
           "y": 691.7222213391906,
           "direction": "bottom"
         },
@@ -3853,17 +3922,17 @@
           "columnIds": [
             "746c51c1-ebff-e421-9f9e-9210faf5d984"
           ],
-          "x": 926.666676931912,
-          "y": 1300.7963063775742,
-          "direction": "left"
+          "x": 1131.666676931912,
+          "y": 1376.2963063775742,
+          "direction": "bottom"
         },
         "end": {
           "tableId": "44824d49-91df-99b6-07ca-5f105f98b39c",
           "columnIds": [
             "fbacd06f-2790-b7aa-bfb6-9c9110784f13"
           ],
-          "x": 878.3518577387298,
-          "y": 1519.6296175247367,
+          "x": 973.3518577387298,
+          "y": 1513.6296175247367,
           "direction": "top"
         },
         "id": "761b345a-3bde-8ac4-c150-6ec3aabe4247",
@@ -3876,7 +3945,7 @@
           "columnIds": [
             "888e6e15-8340-1850-15b8-5dca4025e387"
           ],
-          "x": 139.6481531887876,
+          "x": 382.6481531887876,
           "y": 690.6296363995391,
           "direction": "bottom"
         },
@@ -3885,8 +3954,8 @@
           "columnIds": [
             "928aea4e-b25f-0f5f-1cc2-93374cffc07f"
           ],
-          "x": 210.51851976948015,
-          "y": 823.8888942974578,
+          "x": 279.5185197694801,
+          "y": 798.8888942974578,
           "direction": "top"
         },
         "id": "1a1b1618-2272-5472-e891-1e655df47ef1",
@@ -3908,8 +3977,8 @@
           "columnIds": [
             "1a755827-4562-0305-4c88-61ea45c322fb"
           ],
-          "x": 553.685195707979,
-          "y": 1057.6666540834653,
+          "x": 616.685195707979,
+          "y": 1085.6666540834653,
           "direction": "top"
         },
         "id": "041c0c16-a407-aa72-e933-b965d8becb23",
@@ -3922,7 +3991,7 @@
           "columnIds": [
             "888e6e15-8340-1850-15b8-5dca4025e387"
           ],
-          "x": 382.6481531887876,
+          "x": 139.6481531887876,
           "y": 690.6296363995391,
           "direction": "bottom"
         },
@@ -3991,17 +4060,17 @@
           "columnIds": [
             "58875acc-faa3-5754-a4c1-623ef2eff21a"
           ],
-          "x": 834.851856745319,
-          "y": 642.6388880058572,
-          "direction": "left"
+          "x": 958.101856745319,
+          "y": 691.7222213391906,
+          "direction": "bottom"
         },
         "end": {
           "tableId": "f5c1762d-9dd0-6685-86d3-57a1e80afbca",
           "columnIds": [
             "ea10ac25-e98c-041c-04f5-441674d2fed1"
           ],
-          "x": 764.685195707979,
-          "y": 1057.6666540834653,
+          "x": 827.685195707979,
+          "y": 1085.6666540834653,
           "direction": "top"
         },
         "id": "f7f1e679-eb6b-3b74-0173-06c7f684d743",
@@ -4084,7 +4153,7 @@
             "58875acc-faa3-5754-a4c1-623ef2eff21a"
           ],
           "x": 834.851856745319,
-          "y": 544.4722213391906,
+          "y": 618.0972213391906,
           "direction": "left"
         },
         "end": {
